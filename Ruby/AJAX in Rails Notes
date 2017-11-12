@@ -1,8 +1,13 @@
 Competencies
 AJAX works a little bit differently in Rails than Sinatra
 The idea is the same: an event is triggered, the client calls the server, the server processes the request, the client receives a response
+Rails already has basic AJAX built in, you just need to call it
 Typically, AJAX will trigger on a click event, most likely, a link, so in rails, a 'link_to' element
-In order for Javascript to be allowed 
+In order for Javascript to be allowed, "remote: true"/":remote => true" etc will need to be declared
+This tells the application to run the request through rails-ujs (unobstructed javascript) rather than the normal channels
+From there, the application needs a JS view to handle the commands. They are typically named "[action].js.erb", 
+this filetype can handle both js and ruby in addition to html, make one for each js action
+The jquery/ajax code is then written in the respective js.erb files
 
 Applications
 Implement and master AJAX in Rails projects
