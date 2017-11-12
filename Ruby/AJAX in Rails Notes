@@ -1,0 +1,8 @@
+Competencies
+AJAX works a little bit differently in Rails than Sinatra
+The idea is the same: an event is triggered, the client calls the server, the server processes the request, the client receives a response
+Typically, AJAX will trigger on a click event, most likely, a link, so in rails, a 'link_to' element
+In order for Javascript to be allowed 
+
+Applications
+Implement and master AJAX in Rails projects
