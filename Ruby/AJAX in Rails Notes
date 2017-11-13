@@ -12,3 +12,8 @@ Finally, the actions in the controller must be edited to have a response for the
 
 Applications
 Implement and master AJAX in Rails projects
+
+
+Resources:
+http://guides.rubyonrails.org/working_with_javascript_in_rails.html
+https://launchschool.com/blog/the-detailed-guide-on-how-ajax-works-with-ruby-on-rails
