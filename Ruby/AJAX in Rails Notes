@@ -8,6 +8,7 @@ This tells the application to run the request through rails-ujs (unobstructed ja
 From there, the application needs a JS view to handle the commands. They are typically named "[action].js.erb", 
 this filetype can handle both js and ruby in addition to html, make one for each js action
 The jquery/ajax code is then written in the respective js.erb files
+Finally, the actions in the controller must be edited to have a response for the js request.
 
 Applications
 Implement and master AJAX in Rails projects
