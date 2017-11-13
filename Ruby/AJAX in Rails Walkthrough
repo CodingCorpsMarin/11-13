@@ -1,0 +1,30 @@
+Work in an existing application or make a new one
+
+I will be making a new application with Posts (very original)
+This exercise will ajaxify the delete post action.
+
+(if you're starting fresh, make sure to include jquery in your application!)
+
+....
+
+
+In your posts index view, or wherever you put the link to delete a post(or whatever):
+Edit your delete link to include remote: true
+
+<%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, :remote => true, :class => 'delete_post' %>
+
+Now create a destroy.js.erb view file in the same folder with this code:
+
+$('.delete_post').bind('ajax:success', function() {
+   $(this).closest('tr').fadeOut();
+});
+
+This will target the link with the class "delete_post" and bind the action to an ajax call that fades out the closest table row.
+
+We need to edit the destroy action in our controller to handle this js response.
+
+In the destroy action, add at the bottom:
+
+> format.js { render :layout => false }
+
+Test it out, create a few posts, and click the delete button.
